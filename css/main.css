@@ -1,0 +1,236 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #555555;
+  font-family: "Nunito", sans-serif;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+.container {
+  height: 500px;
+  width: 350px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.cat {
+  position: relative;
+  top: 150px;
+  left: 50px;
+  -webkit-animation: rotation 2s 2 linear;
+          animation: rotation 2s 2 linear;
+}
+
+.cat .face {
+  background-color: #EEE;
+  height: 90px;
+  width: 150px;
+  border-radius: 30px;
+}
+
+.cat .face .ear-l, .cat .face .ear-r {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #EEE;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: relative;
+  z-index: -1;
+}
+
+.cat .face .ear-l {
+  bottom: 35px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.cat .face .ear-l .inner {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #3b89d2;
+  border-left: 25px solid transparent;
+  right: 25px;
+  position: relative;
+}
+
+.cat .face .ear-r {
+  bottom: 85px;
+  left: 110px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.cat .face .ear-r .inner {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #3b89d2;
+  border-right: 25px solid transparent;
+  position: relative;
+}
+
+.cat .face .eye-l, .cat .face .eye-r {
+  background-color: #3b89d2;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.cat .face .eye-l {
+  bottom: 75px;
+  left: 30px;
+}
+
+.cat .face .eye-r {
+  bottom: 105px;
+  left: 90px;
+}
+
+.cat .face .eyeball {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #262626;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+
+.cat .face .nose {
+  height: 0;
+  width: 0;
+  border-top: 8px solid #3b89d2;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: relative;
+  bottom: 110px;
+  left: 68px;
+}
+
+.cat .face .nose .lip1, .cat .face .nose .lip2 {
+  background-color: #3b89d2;
+  height: 8px;
+  width: 1px;
+  position: relative;
+}
+
+.cat .face .nose .lip1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 4px;
+  bottom: 1.5px;
+}
+
+.cat .face .nose .lip2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 10px;
+  left: 3.5px;
+}
+
+.cat .body {
+  background-color: #EEE;
+  height: 120px;
+  width: 130px;
+  position: relative;
+  left: 30px;
+  bottom: 5px;
+  border-radius: 0 65px 0 0;
+}
+
+.cat .body .paw-l, .cat .body .paw-r {
+  background-color: #EEE;
+  height: 10px;
+  width: 22px;
+  position: relative;
+  border-radius: 0 0 10px 10px;
+}
+
+.cat .body .paw-l {
+  top: 120px;
+}
+
+.cat .body .paw-r {
+  top: 110px;
+  left: 50px;
+}
+
+.cat .body .tail {
+  background-color: #EEE;
+  height: 20px;
+  width: 105px;
+  position: relative;
+  top: 80px;
+  left: 100px;
+  border-radius: 0 20px 20px 0;
+}
+
+.cat .shadow {
+  background-color: rgba(255, 255, 255, 0.171);
+  height: 40px;
+  width: 220px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 15px;
+  left: 20px;
+  z-index: -1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  color: #EEE;
+  margin: 0;
+  -webkit-animation: zoomIn 2 2s;
+          animation: zoomIn 2 2s;
+}
+/*# sourceMappingURL=main.css.map */
